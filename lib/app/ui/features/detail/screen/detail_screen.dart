@@ -83,24 +83,24 @@ class DetailScreen extends ConsumerWidget {
                   onPressed: detailState.isLoading
                       ? null
                       : () async {
-                    await controller.buyBook(book);
-                  },
+                          await controller.buyBook(book);
+                        },
                   child: detailState.isLoading
                       ? const SizedBox(
-                    height: 22,
-                    width: 22,
-                    child: CircularProgressIndicator(
-                      color: Colors.white,
-                      strokeWidth: 2,
-                    ),
-                  )
+                          height: 22,
+                          width: 22,
+                          child: CircularProgressIndicator(
+                            color: Colors.white,
+                            strokeWidth: 2,
+                          ),
+                        )
                       : Text(
-                    "Beli Sekarang • ${book.condition}",
-                    style: AppFonts.textMedium(
-                      size: 16,
-                      color: AppColors.white,
-                    ),
-                  ),
+                          "Beli Sekarang • ${book.condition}",
+                          style: AppFonts.textMedium(
+                            size: 16,
+                            color: AppColors.white,
+                          ),
+                        ),
                 ),
               ),
 
@@ -176,7 +176,7 @@ class DetailScreen extends ConsumerWidget {
               const InfoItem(label: "Penerbit", value: "Gramedia Pustaka"),
               const InfoItem(label: "Tanggal Terbit", value: "12 Agustus 2024"),
               const InfoItem(label: "Bahasa", value: "Indonesia"),
-              const InfoItem(label: "Halaman", value: "320 Halaman"),
+              const InfoItem(label: "Halaman", value: "320 Halaman,"),
               const InfoItem(label: "ISBN", value: "978-602-xxx-xxx"),
 
               SoftDivider(),

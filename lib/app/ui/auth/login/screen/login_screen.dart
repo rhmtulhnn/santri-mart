@@ -46,7 +46,9 @@ class _LoginViewState extends ConsumerState<LoginScreen> {
               // Title
               const AppTitle(
                 heading: 'Hai Santri',
-                subtitle: 'Silahkan masukan alamat email dan\nkata sandi yang sudah ada.',
+                subtitle:
+                    'Silahkan masukan alamat email dan'
+                    '\nkata sandi yang sudah ada.',
               ),
 
               // FORM
@@ -58,7 +60,7 @@ class _LoginViewState extends ConsumerState<LoginScreen> {
                     InputField(
                       controller: controller.emailController,
                       label: 'Alamat Email',
-                      hint: 'example@ft-umt.ac.id',
+                      hint: 'example@kitabstore.com',
                       keyboardType: TextInputType.emailAddress,
                       obscure: false,
                       validator: controller.emailValidator,
@@ -100,10 +102,7 @@ class _LoginViewState extends ConsumerState<LoginScreen> {
 
               // Error message (if any)
               if (state.error != null) ...[
-                Text(
-                  state.error!,
-                  style: const TextStyle(color: Colors.red),
-                ),
+                Text(state.error!, style: const TextStyle(color: Colors.red)),
                 const SizedBox(height: 12),
               ],
 
@@ -115,31 +114,31 @@ class _LoginViewState extends ConsumerState<LoginScreen> {
                   onPressed: (!state.isFormValid || state.isLoading)
                       ? null
                       : () {
-                    if (!(_formKey.currentState?.validate() ?? false)) {
-                      return;
-                    }
-                    context.go('/main');
-                  },
+                          if (!(_formKey.currentState?.validate() ?? false)) {
+                            return;
+                          }
+                          context.go('/main');
+                        },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12.0),
                     child: state.isLoading
                         ? const SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Colors.white,
-                        ),
-                      ),
-                    )
+                            height: 20,
+                            width: 20,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                Colors.white,
+                              ),
+                            ),
+                          )
                         : Text(
-                      'Masuk',
-                      style: AppFonts.displayBold(
-                        size: 16.8,
-                        color: Colors.white,
-                      ),
-                    ),
+                            'Masuk',
+                            style: AppFonts.displayBold(
+                              size: 16.8,
+                              color: Colors.white,
+                            ),
+                          ),
                   ),
                 ),
               ),

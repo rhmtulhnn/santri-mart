@@ -26,11 +26,10 @@ class DetailController extends StateNotifier<DetailState> {
   Future<void> buyBook(BookModel book) async {
     state = state.copyWith(isLoading: true);
 
-    await Future.delayed(const Duration(seconds: 1)); // simulasi proses
+    await Future.delayed(const Duration(seconds: 1));
 
     state = state.copyWith(isLoading: false);
 
-    // nanti bisa dipindah ke checkout / keranjang
     if (kDebugMode) {
       print("Membeli buku: ${book.title}");
     }
