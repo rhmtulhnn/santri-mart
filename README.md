@@ -25,6 +25,7 @@ Untuk menjalankan project, cukup jalankan `flutter pub get` lalu `flutter run`.
 ## 📂 Project Structure (Ringkas)
 
 ### 📸 Penjelasan Screenshots
+![Cover](./login-screenshot.png)
 
 #### 1️⃣ *Login Screen* — `login-screenshot.png`
 Halaman untuk proses login pengguna, berisi:
@@ -41,6 +42,7 @@ File terkait:
 ---
 
 #### 2️⃣ *Home Screen* — `home-screenshot.png`
+![Cover](./home-screenshot.png)
 Halaman utama aplikasi, menampilkan:
 - Lokasi pengguna
 - Search bar
@@ -55,6 +57,7 @@ File terkait:
 ---
 
 #### 3️⃣ *Detail Screen* — `detail-screenshot.png`
+![Cover](./detail-screenhot.png)
 Detail tampilan untuk satu buku, berisi:
 - Cover kitab
 - Judul & harga
